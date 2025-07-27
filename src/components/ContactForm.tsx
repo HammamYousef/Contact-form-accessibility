@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import FormInput from "./FormInput";
 
 const ContactForm = () => {
+
+  const [isChecked, setIsChecked] = useState(false);
+
   return (
     <form className="bg-white rounded-lg p-4 flex flex-col items-start gap-6 w-full">
       <p className="text-3xl font-bold">Contact Us</p>
@@ -16,6 +19,7 @@ const ContactForm = () => {
         name="queryType"
         options={["General Enquiry", "Support Request"]}
         className="w-full"
+        keep
       />
 
       <FormInput label="Message" type="text" className="w-full">
